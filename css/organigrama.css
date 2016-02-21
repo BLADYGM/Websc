@@ -1,0 +1,271 @@
+body
+{
+	background: rgb(255, 255, 255);
+	font-family: "Open Sans";
+	font-size: 16px;
+}
+header 
+{
+	background-color: rgba(136, 178, 53, 1); 
+	color :white;
+	position:relative;
+	overflow: hidden;
+}
+header h1 
+{
+    display: inline-block;
+    font-size: 1em;
+    position: absolute;
+    top: 3.4em;
+    margin: auto 0.4em;
+
+}
+header figure
+{
+	display: inline-block;
+	margin: 1em;
+}
+
+header #edificio_muni img 
+{
+	border: 1px solid red;
+    margin: 0 2.2em 0 0;
+    position: absolute;
+    right: 0;
+    top: 2.6em;  
+    width: 200px;
+    border-radius: 20%;  
+  }
+header #logo img 
+{
+	border-radius: 10px;
+	width: 90px;
+}
+nav 
+{
+	background: #F9BF51;
+	padding: 0 6em 0 0;
+	z-index: 1000;
+}
+nav ul 
+{
+	list-style: none;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+}
+nav ul li 
+{
+	display: inline-block;
+	margin: 0 0.6em 0 0.6em;
+	position: relative;
+}
+nav ul li a 
+{
+	color: white;
+	display: block;
+	padding: 0.5em;
+	text-decoration: none;
+	-webkit-transition: 0.3s;
+}
+nav ul li a span 
+{
+	float: right;
+	margin: 0.2em 0 0 1em; 
+}
+nav ul li:hover
+{
+ background-color: rgba(136, 178, 53, 1);
+}
+nav ul li:hover .submenu
+{
+ 	display: block;
+}
+nav ul li .submenu
+{
+	display: none;
+	background: #000;
+	position: absolute;
+	width: 150%;
+	z-index: 1000;
+}
+nav ul li .submenu li {
+	display:block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+nav ul li .children li a {
+	display: block;
+}
+#btn-menu {
+	display: none;
+}
+label {
+	display: none;
+}
+/*Media Screen */
+
+@media screen and (max-width: 800px) {
+
+	label {
+		font-size: 35px;
+		cursor: pointer;
+		display: inline-block;
+		margin: 0.2em;
+		position: relative;
+		left: 90%;
+
+	}		
+	nav { 
+		margin: 0;
+		width: 100%;
+		position: absolute;
+		transform:translateX(-100%);
+		transition: all 0.3s;
+	}
+
+	#btn-menu:checked ~ nav {
+		transform:translateX(0);
+		position: relative;
+	}
+	nav ul li {
+		display: block;
+		border-bottom: 1px solid rgba(255,255,255,.5);
+	}
+	nav ul li a {
+		display: block;
+	} 
+	nav ul li:hover .submenu {
+		display: none;
+		position: static;
+	}
+	nav ul li .submenu {
+		width: 100%;
+		position: relative;		
+	}
+	nav ul li .submenu li a {
+		margin-left: 20px;
+	}
+	#edificio_muni{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	
+	.contenedor_total{
+		width: 95%;
+		margin: 0 auto;
+		box-shadow:  0 0 20px rgba(0, 0, 0, 0.33);
+		max-width: 100%;
+	}
+}
+/* Slider */
+.main_slide
+{
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.slides 
+{
+	width: 100%;
+	display: block;
+}
+.slides img 
+{
+	width: 100%;
+}
+.slidesjs-pagination
+{
+	background: #424242;
+	list-style: none;
+	margin: 0 0 -8.1em 0;
+	overflow: hidden;
+
+}
+
+.slidesjs-pagination li 
+{
+	float: left;
+}
+
+.slidesjs-pagination li a 
+{
+	display: block;
+	padding: 10px 20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.slidesjs-pagination li a:hover
+{
+	background: #000;
+}
+
+
+.slidesjs-navigation 
+{
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0.7em;
+	float: right;
+}
+
+/* Mision vision */
+.div_organigrama
+{
+	margin: 2em;
+
+}
+.titulo{
+	text-align: center;
+	font-family: serif;
+}
+.cuerpo p {
+	text-align: center;
+}
+.cuerpo p img {
+	max-width: 100%;
+	height: auto;
+}
+.div_organigrama .cuerpo h3 a {
+	color : #F19E00;
+}
+
+/*Enlaces importantes*/
+
+.enlaces_importantes 
+{
+	margin: 0.5em;
+	text-align: center;
+}
+.links
+{
+	display: inline-block;
+	margin: 1em 3em;
+}
+
+/* Footer */
+.footer
+{
+	background-color: rgba(136, 178, 53, 1);
+	color : white;
+	text-align: center;
+}
+.info_footer
+{
+	display: inline-block;
+	margin: 0.5em 1em;
+}
+
+
+
+
+
+
+
+
+
